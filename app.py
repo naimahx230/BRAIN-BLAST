@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     q = questions[current_index]
     return render_template("quiz.html", question=q, q_num=current_index + 1, total=len(questions))
-
+import os
 if __name__ == "__main__":
    app.run(host="0.0.0.0", port=5000,)
    if __name__ == "__main__":
