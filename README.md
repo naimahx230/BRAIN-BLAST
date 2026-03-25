@@ -26,7 +26,7 @@ python -m venv venv
 source venv/bin/activate  # Mac/Linux
 venv\Scripts\activate     # Windows
 
-## 3.## Installation & Setup
+## 3.Installation & Setup
 **Install Python**
 Download and install Python from:
 https://www.python.org/downloads/
