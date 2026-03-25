@@ -12,7 +12,7 @@ questions = [
 
 @app.route("/", methods=["GET", "POST"])
 def quiz():
-    
+    return "App is working"
     if "current_question" not in session:
         session["current_question"] = 0
         session["score"] = 0
