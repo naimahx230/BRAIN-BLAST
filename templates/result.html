@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Result</title>
+<style>
+    body {
+        background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+        font-family: 'Comic Neue', cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: #fff;
+    }
+    .result {
+        text-align: center;
+        background: rgba(0,0,0,0.5);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px #ff69b4;
+    }
+    p {
+        font-size: 1.5em;
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+<div class="result">
+    <h1>🎉 Quiz Finished!</h1>
+    <p>Your score: {{ score }} / {{ total }}</p>
+</div>
+</body>
+</html>
