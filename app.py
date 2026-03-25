@@ -11,10 +11,11 @@ questions = [
 
 @app.route("/", methods=["GET", "POST"])
 def quiz():
-    # Initialize session variables
-    if "current_question" not in session:
-        session["current_question"] = 0
-        session["score"] = 0
+  import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
 
     current_index = session["current_question"]
 
@@ -26,7 +27,6 @@ def quiz():
         session["current_question"] += 1
         current_index = session["current_question"]
 
-        # If all questions are answered, show results
         if current_index >= len(questions):
             score = session["score"]
             session.clear()
@@ -34,7 +34,7 @@ def quiz():
 
         return redirect(url_for("quiz"))
 
-    # Show current question
+
     q = questions[current_index]
     return render_template("quiz.html", question=q, q_num=current_index + 1, total=len(questions))
 
